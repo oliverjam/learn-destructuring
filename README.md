@@ -2,6 +2,8 @@
 
 Destructuring is a cool new ES6 feature that gets used in React a lot.
 
+## Learn
+
 It's a way to pull values out of arrays or objects and assign them to variables. For example:
 
 ```js
@@ -85,3 +87,7 @@ const TextInput = ({ id, label, ...otherProps }) => (
   </label>
 );
 ```
+
+## Practice
+
+Open `index.js` and edit each function/component to make the tests pass.
