@@ -11,7 +11,7 @@ const getAttribution = postObject => `${title} by ${author} @ ${timestamp}`;
 // calculateTotal receives a bill object { subtotal: number, tax: number, tip: number || undefined }
 // the tip might be undefined, in which case it should default to 10%
 const calculateTotal = bill => {
-  return subtotal * (1 + tax) * tip;
+  return subtotal * (1 + tax) * (1 + tip);
 };
 
 // ProfileCard receives a data object that contains a user { data: { user: { avatarSrc: string, username: string, githubUrl: string  } } }
@@ -25,6 +25,7 @@ const ProfileCard = data => (
 
 // Counter receives a prop called `step` that determines how much to increment each time
 // Edit the render method so that it works properly
+// You'll also need to look at the onClick on the button
 class Counter extends React.Component {
   state = {
     count: 0,
@@ -33,7 +34,7 @@ class Counter extends React.Component {
     return (
       <button
         onClick={() =>
-          this.setState(prevState => ({ count: prevState + step }))
+          this.setState(prevState => ({ count: prevCount + step }))
         }
       >
         Count: {count}

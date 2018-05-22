@@ -40,7 +40,7 @@ class Counter extends React.Component {
     return (
       <button
         onClick={() =>
-          this.setState(prevState => ({ count: prevState.count + step }))
+          this.setState(({ count: prevCount }) => ({ count: prevCount + step }))
         }
       >
         Count: {this.state.count}

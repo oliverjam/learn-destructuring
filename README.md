@@ -88,6 +88,15 @@ const TextInput = ({ id, label, ...otherProps }) => (
 );
 ```
 
+You can also rename the properties during destructuring, in case there may be conflicts with ones you already have.
+
+```js
+import numbers from 'numbers';
+
+const addAll = ({ numbers: myNumbers }) =>
+  myNumbers.reduce((acc, el) => acc + el);
+```
+
 ## Practice
 
 Open `index.js` and edit each function/component to make the tests pass.
