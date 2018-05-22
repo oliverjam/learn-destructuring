@@ -9,6 +9,17 @@ import {
   Counter,
 } from './';
 
+// this stops Jest logging enormous red errors initially
+// (because loads of variables in the React components are undefined)
+beforeEach(() => {
+  jest.spyOn(console, 'error');
+  console.error.mockImplementation(() => {});
+});
+
+afterEach(() => {
+  console.error.mockRestore();
+});
+
 test('sumArray', () => {
   const testArray = [1, 2];
   expect(sumArray(testArray)).toEqual(3);
