@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // sumArray takes an array of two numbers and returns the sum of the numbers
 // edit the parameters of the function to make this work
@@ -28,7 +28,7 @@ const ProfileCard = data => (
 // You'll also need to look at the onClick on the button
 class Counter extends React.Component {
   state = {
-    count: 0
+    count: 0,
   };
   render() {
     return (

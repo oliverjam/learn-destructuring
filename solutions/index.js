@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // sumArray takes an array of two numbers and returns the sum of the numbers
 // edit the parameters of the function to make this work
@@ -18,8 +18,8 @@ const calculateTotal = ({ subtotal, tax, tip = 0.1 }) => {
 // ProfileCard receives a data object that contains a user { data: { user: { avatarSrc: string, username: string, githubUrl: string  } } }
 const ProfileCard = ({
   data: {
-    user: { avatarSrc, username, githubUrl }
-  }
+    user: { avatarSrc, username, githubUrl },
+  },
 }) => (
   <div>
     <img src={avatarSrc} />
@@ -32,7 +32,7 @@ const ProfileCard = ({
 // Edit the render method so that it works properly
 class Counter extends React.Component {
   state = {
-    count: 0
+    count: 0,
   };
   render() {
     const { step } = this.props;
