@@ -99,4 +99,6 @@ const addAll = ({ numbers: myNumbers }) =>
 
 ## Practice
 
+Clone this repo and run `npm i`  
+Run `npm t` to start the test watcher  
 Open `index.js` and edit each function/component to make the tests pass.
