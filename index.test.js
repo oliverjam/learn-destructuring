@@ -7,6 +7,7 @@ import {
   calculateTotal,
   ProfileCard,
   Counter,
+  ToggleCounter,
 } from './';
 
 // this stops Jest logging enormous red errors initially
@@ -60,4 +61,21 @@ test('Counter', () => {
   expect(button.textContent).toEqual('Count: 0');
   TestUtils.Simulate.click(button);
   expect(button.textContent).toEqual('Count: 2');
+});
+
+describe('ToggleCounter', () => {
+  test('when closed', () => {
+    const root = document.createElement('div');
+    ReactDOM.render(<ToggleCounter step={2} />, root);
+    const div = root.querySelector('div');
+    expect(div.textContent).toEqual(`I'm closed`);
+  });
+  test('when open', () => {
+    const root = document.createElement('div');
+    ReactDOM.render(<ToggleCounter isOpen={true} step={2} />, root);
+    const button = root.querySelector('button');
+    expect(button.textContent).toEqual('Count: 0');
+    TestUtils.Simulate.click(button);
+    expect(button.textContent).toEqual('Count: 2');
+  });
 });

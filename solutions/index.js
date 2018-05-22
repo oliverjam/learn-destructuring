@@ -49,4 +49,19 @@ class Counter extends React.Component {
   }
 }
 
-export { sumArray, getAttribution, calculateTotal, ProfileCard, Counter };
+// ToggleCounter renders the counter if it is passed an `isOpen` prop
+// It only needs this one prop itself, and it needs to pass everything else
+// it's given straight down to Counter
+
+const ToggleCounter = ({ isOpen = false, ...restOfTheProps }) => {
+  return isOpen ? <Counter {...restOfTheProps} /> : <div>I'm closed</div>;
+};
+
+export {
+  sumArray,
+  getAttribution,
+  calculateTotal,
+  ProfileCard,
+  Counter,
+  ToggleCounter,
+};

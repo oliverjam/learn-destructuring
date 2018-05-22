@@ -80,10 +80,10 @@ class Stopwatch extends React.Component {
 Another nice trick is to combine destructuring with the rest operator (`...`) to pull off just the parameters you need:
 
 ```jsx
-const TextInput = ({ id, label, ...otherProps }) => (
+const TextInput = ({ id, label, ...whateverYouWantToCallTheRest }) => (
   <label htmlFor={id}>
     {label}
-    <input id={id} {...otherProps} />
+    <input id={id} {...whateverYouWantToCallTheRest} />
   </label>
 );
 ```
