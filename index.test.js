@@ -5,6 +5,7 @@ import {
   sumArray,
   getAttribution,
   calculateTotal,
+  listVenues,
   ProfileCard,
   Counter,
   ToggleCounter,
@@ -38,6 +39,16 @@ test('getAttribution', () => {
 test('calculateTotal', () => {
   const bill = { subtotal: 100, tax: 0.2 };
   expect(calculateTotal(bill)).toEqual(132);
+});
+
+test('listVenues', () => {
+  const show = {
+    band: 'Bullet For My Valentine',
+    venues: ['O2 Academy', 'Alexandria Palace', 'Download'],
+  };
+  expect(listVenues(show)).toEqual(
+    'Bullet For My Valentine are playing O2 Academy, Alexandria Palace, Download.'
+  );
 });
 
 test('ProfileCard', () => {

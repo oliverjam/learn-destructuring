@@ -11,9 +11,12 @@ const getAttribution = ({ title, author, timestamp }) =>
 
 // calculateTotal receives a bill object { subtotal: number, tax: number, tip: number || undefined }
 // the tip might be undefined, in which case it should default to 0.1 (10%)
-const calculateTotal = ({ subtotal, tax, tip = 0.1 }) => {
-  return subtotal * (1 + tax) * (1 + tip);
-};
+const calculateTotal = ({ subtotal, tax, tip = 0.1 }) =>
+  subtotal * (1 + tax) * (1 + tip);
+
+// listVenues takes a show object { band: "Bullet For My Valentine", venues: ["O2 Academy", "Alexandria Palace", "Download"] }
+const listVenues = ({ band, venues: [venue1, venue2, venue3] }) =>
+  `${band} are playing ${venue1}, ${venue2}, ${venue3}.`;
 
 // ProfileCard receives a data object that contains a user { data: { user: { avatarSrc: string, username: string, githubUrl: string  } } }
 const ProfileCard = ({
@@ -61,6 +64,7 @@ export {
   sumArray,
   getAttribution,
   calculateTotal,
+  listVenues,
   ProfileCard,
   Counter,
   ToggleCounter,
