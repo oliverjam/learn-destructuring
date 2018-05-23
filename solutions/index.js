@@ -57,7 +57,7 @@ class Counter extends React.Component {
 // It only needs this one prop itself, and it needs to pass everything else
 // it's given straight down to Counter
 
-const ToggleCounter = ({ isOpen = false, ...restOfTheProps }) => {
+const ToggleCounter = ({ isOpen = true, ...restOfTheProps }) => {
   return isOpen ? <Counter {...restOfTheProps} /> : <div>I'm closed</div>;
 };
 

@@ -9,7 +9,7 @@ import {
   ProfileCard,
   Counter,
   ToggleCounter,
-} from './';
+} from './solutions';
 
 // this stops Jest logging enormous red errors initially
 // (because loads of variables in the React components are undefined)
@@ -77,13 +77,13 @@ test('Counter', () => {
 describe('ToggleCounter', () => {
   test('when closed', () => {
     const root = document.createElement('div');
-    ReactDOM.render(<ToggleCounter step={2} />, root);
+    ReactDOM.render(<ToggleCounter isOpen={false} step={2} />, root);
     const div = root.querySelector('div');
     expect(div.textContent).toEqual(`I'm closed`);
   });
-  test('when open', () => {
+  test('when open by default', () => {
     const root = document.createElement('div');
-    ReactDOM.render(<ToggleCounter isOpen={true} step={2} />, root);
+    ReactDOM.render(<ToggleCounter step={2} />, root);
     const button = root.querySelector('button');
     expect(button.textContent).toEqual('Count: 0');
     TestUtils.Simulate.click(button);

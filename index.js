@@ -46,7 +46,7 @@ class Counter extends React.Component {
 }
 
 // ToggleCounter renders the counter if it is passed an `isOpen` prop
-// This prop should defaul to `true`
+// This prop should default to `true`
 // It only needs this one prop itself, and it needs to pass everything else
 // it's given straight down to Counter
 
