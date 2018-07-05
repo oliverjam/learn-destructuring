@@ -9,7 +9,7 @@ import {
   ProfileCard,
   Counter,
   ToggleCounter,
-} from './solutions';
+} from './';
 
 // this stops Jest logging enormous red errors initially
 // (because loads of variables in the React components are undefined)
