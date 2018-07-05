@@ -47,7 +47,7 @@ class Counter extends React.Component {
           }))
         }
       >
-        Count: {this.state.count}
+        Count: {count}
       </button>
     );
   }
