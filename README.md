@@ -42,7 +42,7 @@ const user = { name: 'Zooey', surname: 'Miller' };
 console.log(formatName(user)); // "Zooey Miller"
 ```
 
-This enabled a cool pattern—named function parameters:
+This enables a cool pattern—named function parameters:
 
 ```js
 function calculateTotal({ subtotal, tax, tip }) {
