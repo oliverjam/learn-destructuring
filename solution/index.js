@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // sumArray takes an array of two numbers and returns the sum of the numbers
 // edit the parameters of the function to make this work
@@ -33,24 +33,9 @@ const ProfileCard = ({
 
 // Counter receives a prop called `step` that determines how much to increment each time
 // Edit the render method so that it works properly
-class Counter extends React.Component {
-  state = {
-    count: 0,
-  };
-  render() {
-    const { count } = this.state;
-    return (
-      <button
-        onClick={() =>
-          this.setState(({ count: prevCount }, { step }) => ({
-            count: prevCount + step,
-          }))
-        }
-      >
-        Count: {count}
-      </button>
-    );
-  }
+function Counter({ step }) {
+  const [count, setCount] = React.useState(0);
+  return <button onClick={() => setCount(count + step)}>Count: {count}</button>;
 }
 
 // ToggleCounter renders the counter if it is passed an `isOpen` prop
