@@ -10,7 +10,7 @@ It's a way to pull values out of arrays or objects and assign them to variables.
 const [first, second] = [1, 2];
 console.log(first, second); // 1 2
 
-const { name, surname } = { name: 'Zooey', surname: 'Miller' };
+const { name, surname } = { name: "Zooey", surname: "Miller" };
 console.log(name, surname); // "Zooey" "Miller"
 ```
 
@@ -19,7 +19,7 @@ You can also grab nested values:
 ```js
 const {
   data: { name },
-} = { data: { name: 'Zooey' } };
+} = { data: { name: "Zooey" } };
 console.log(name); // "Zooey"
 ```
 
@@ -27,7 +27,7 @@ You can even set default values that will apply when the value is `undefined`:
 
 ```js
 const {
-  data: { name = 'Default' },
+  data: { name = "Default" },
 } = { data: {} };
 console.log(name); // "Default"
 ```
@@ -38,7 +38,7 @@ It also works in function parameters:
 function formatName({ name, surname }) {
   return `${name} ${surname}`;
 }
-const user = { name: 'Zooey', surname: 'Miller' };
+const user = { name: "Zooey", surname: "Miller" };
 console.log(formatName(user)); // "Zooey Miller"
 ```
 
@@ -62,21 +62,6 @@ const Button = ({ label, onClick }) => (
 );
 ```
 
-It's also commonly used in the render method of a class component to avoid writing `this.props.` and `this.state.` all the time:
-
-```jsx
-class Stopwatch extends React.Component {
-  state = {
-    time: 0,
-    running: false
-  }
-  render() {
-    const { time, running } = this.state;
-    return (...)
-  }
-}
-```
-
 Another nice trick is to combine destructuring with the rest operator (`...`) to pull off just the parameters you need:
 
 ```jsx
@@ -91,7 +76,7 @@ const TextInput = ({ id, label, ...whateverYouWantToCallTheRest }) => (
 You can also rename the properties during destructuring, in case there may be conflicts with ones you already have.
 
 ```js
-import numbers from 'numbers';
+import numbers from "numbers";
 
 const addAll = ({ numbers: myNumbers }) =>
   myNumbers.reduce((acc, el) => acc + el);
