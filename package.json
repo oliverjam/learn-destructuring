@@ -4,8 +4,8 @@
   "description": "Destructuring is a cool new ES6 feature that gets used in React a lot.",
   "main": "index.js",
   "scripts": {
-    "test": "jest workshop/ --watch --noStackTrace",
-    "test:solution": "jest solution/ --watch --noStackTrace"
+    "test": "jest workshop/index.test.js --watch --noStackTrace",
+    "test:solution": "jest solution/index.test.js --watch --noStackTrace"
   },
   "keywords": [],
   "author": "",
