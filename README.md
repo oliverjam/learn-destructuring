@@ -54,7 +54,7 @@ console.log(total); // 130
 
 See how we don't have to worry about the order we pass the parameters in? It also makes the function self-documenting and it's easier to remember what values you're passing when you call the function.
 
-Functional React components similarly take a single argument (props), so this pattern is used a lot there:
+React components similarly take a single argument (props), so this pattern is used a lot there:
 
 ```jsx
 const Button = ({ label, onClick }) => (
