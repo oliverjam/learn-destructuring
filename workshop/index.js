@@ -12,7 +12,7 @@ const getAttribution = postObject => `${title} by ${author} @ ${timestamp}`;
 // the tip might be undefined, in which case it should default to 10%
 const calculateTotal = bill => subtotal * (1 + tax) * (1 + tip);
 
-// listVenues takes a show object { band: "Bullet For My Valentine", venues: ["O2 Academy", "Alexandria Palace", "Download"] }
+// listVenues takes a show object { band: "Bullet For My Valentine", venues: ["O2 Academy", "Alexandra Palace", "Download"] }
 const listVenues = show =>
   `${band} are playing ${venue1}, ${venue2}, ${venue3}.`;
 
@@ -49,5 +49,5 @@ export {
   listVenues,
   ProfileCard,
   Counter,
-  ToggleCounter,
+  ToggleCounter
 };

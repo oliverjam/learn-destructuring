@@ -14,15 +14,15 @@ const getAttribution = ({ title, author, timestamp }) =>
 const calculateTotal = ({ subtotal, tax, tip = 0.1 }) =>
   subtotal * (1 + tax) * (1 + tip);
 
-// listVenues takes a show object { band: "Bullet For My Valentine", venues: ["O2 Academy", "Alexandria Palace", "Download"] }
+// listVenues takes a show object { band: "Bullet For My Valentine", venues: ["O2 Academy", "Alexandra Palace", "Download"] }
 const listVenues = ({ band, venues: [venue1, venue2, venue3] }) =>
   `${band} are playing ${venue1}, ${venue2}, ${venue3}.`;
 
 // ProfileCard receives a data object that contains a user { data: { user: { avatarSrc: string, username: string, githubUrl: string  } } }
 const ProfileCard = ({
   data: {
-    user: { avatarSrc, username, githubUrl },
-  },
+    user: { avatarSrc, username, githubUrl }
+  }
 }) => (
   <div>
     <img src={avatarSrc} />
@@ -53,5 +53,5 @@ export {
   listVenues,
   ProfileCard,
   Counter,
-  ToggleCounter,
+  ToggleCounter
 };
