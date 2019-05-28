@@ -26,8 +26,6 @@ const ProfileCard = data => (
 );
 
 // Counter receives a prop called `step` that determines how much to increment each time
-// Edit the render method so that it works properly
-// You'll also need to look at the onClick on the button
 function Counter(props) {
   const [count, setCount] = React.useState(0);
   return <button onClick={() => setCount(count + step)}>Count: {count}</button>;
