@@ -26,9 +26,7 @@ console.log(name); // "Zooey"
 You can even set default values that will apply when the value is `undefined`:
 
 ```js
-const {
-  data: { name = "Default" },
-} = { data: {} };
+const { name = "Default" } = { surname: "Miller" };
 console.log(name); // "Default"
 ```
 
@@ -42,7 +40,7 @@ const user = { name: "Zooey", surname: "Miller" };
 console.log(formatName(user)); // "Zooey Miller"
 ```
 
-This enables a cool pattern—named function parameters:
+This enables a cool pattern: named function parameters:
 
 ```js
 function calculateTotal({ subtotal, tax, tip }) {
@@ -54,7 +52,7 @@ console.log(total); // 130
 
 See how we don't have to worry about the order we pass the parameters in? It also makes the function self-documenting and it's easier to remember what values you're passing when you call the function.
 
-React components similarly take a single argument (props), so this pattern is used a lot there:
+React components similarly take a single argument (the props object), so this pattern is used a lot there:
 
 ```jsx
 const Button = ({ label, onClick }) => (
@@ -62,7 +60,7 @@ const Button = ({ label, onClick }) => (
 );
 ```
 
-Another nice trick is to combine destructuring with the rest operator (`...`) to pull off just the parameters you need:
+Another nice trick is to combine destructuring with the rest operator (`...`) to pull off just the props you need. You can then use the spread operator (also `...`) to copy all the other props onto another JSX element:
 
 ```jsx
 const TextInput = ({ id, label, ...whateverYouWantToCallTheRest }) => (
@@ -84,6 +82,6 @@ const addAll = ({ numbers: myNumbers }) =>
 
 ## Practice
 
-Clone this repo and run `npm i`  
-Run `npm t` to start the test watcher  
-Open `index.js` and edit each function/component to make the tests pass.
+1. Clone this repo and run `npm i`
+1. Run `npm t` to start the test watcher
+1. Open `index.js` and edit each function/component to make the tests pass.
