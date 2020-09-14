@@ -55,20 +55,22 @@ See how we don't have to worry about the order we pass the parameters in? It als
 React components similarly take a single argument (the props object), so this pattern is used a lot there:
 
 ```jsx
-const Button = ({ label, onClick }) => (
-  <button onClick={onClick}>{label}</button>
-);
+function Button({ label, onClick }) {
+  return <button onClick={onClick}>{label}</button>;
+}
 ```
 
 Another nice trick is to combine destructuring with the rest operator (`...`) to pull off just the props you need. You can then use the spread operator (also `...`) to copy all the other props onto another JSX element:
 
 ```jsx
-const TextInput = ({ id, label, ...whateverYouWantToCallTheRest }) => (
-  <label htmlFor={id}>
-    {label}
-    <input id={id} {...whateverYouWantToCallTheRest} />
-  </label>
-);
+function TextInput({ id, label, ...whateverYouWantToCallTheRest }) {
+  return (
+    <label htmlFor={id}>
+      {label}
+      <input id={id} {...whateverYouWantToCallTheRest} />
+    </label>
+  );
+}
 ```
 
 You can also rename the properties during destructuring, in case there may be conflicts with ones you already have.

@@ -19,17 +19,19 @@ const listVenues = ({ band, venues: [venue1, venue2, venue3] }) =>
   `${band} are playing ${venue1}, ${venue2}, ${venue3}.`;
 
 // ProfileCard receives a data object that contains a user { data: { user: { avatarSrc: string, username: string, githubUrl: string  } } }
-const ProfileCard = ({
+function ProfileCard({
   data: {
-    user: { avatarSrc, username, githubUrl }
-  }
-}) => (
-  <div>
-    <img src={avatarSrc} />
-    <h3>{username}</h3>
-    <a href={githubUrl}>Github profile</a>
-  </div>
-);
+    user: { avatarSrc, username, githubUrl },
+  },
+}) {
+  return (
+    <div>
+      <img src={avatarSrc} />
+      <h3>{username}</h3>
+      <a href={githubUrl}>Github profile</a>
+    </div>
+  );
+}
 
 // Counter receives a prop called `step` that determines how much to increment each time
 function Counter({ step }) {
@@ -41,9 +43,9 @@ function Counter({ step }) {
 // It only needs this one prop itself, and it needs to pass everything else
 // it's given straight down to Counter
 
-const ToggleCounter = ({ isOpen = true, ...restOfTheProps }) => {
+function ToggleCounter({ isOpen = true, ...restOfTheProps }) {
   return isOpen ? <Counter {...restOfTheProps} /> : <div>I'm closed</div>;
-};
+}
 
 export {
   sumArray,
@@ -52,5 +54,5 @@ export {
   listVenues,
   ProfileCard,
   Counter,
-  ToggleCounter
+  ToggleCounter,
 };
